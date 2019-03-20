@@ -1,0 +1,77 @@
+Objectives:
+
+Queue operations.
+
+Data structure:
+
+typedef struct {
+
+int width;
+
+int height;
+
+}Rect;
+
+typedef struct node {
+
+Rect* r;
+
+struct node* next;
+
+}Node;
+
+typedef struct {
+
+Node* head;
+
+Node* tail;
+
+}Queue;
+
+Specification:
+
+In this lab six Queue-related operation functions need to be implemented by using the given function prototypes and data structures.
+
+1. List* createQueue(void);
+
+This function initializes an empty “Queue” with the “Queue” data structure and returns an empty queue.
+
+2. int enQueue(List*);
+
+This function receives a queue, and inserts one more Node with random width and height values into the current queue. This operation should be done within O(1) time. It returns 1 if the insertion succeeded and -1 if the insertion failed.
+
+3. void* deQueue(List*);
+
+This function receives a queue, and deletes the earliest Node in the queue. This operation should be done within O(1) time. It returns the pointer pointing to the Rect inside the deleted Node if the deletion succeeded and NULL if the deletion failed.
+
+4. int deQueueAll(List*);
+
+This function receives a queue, and deletes all the Nodes in the current queue. It returns 1 if the deletion succeeded and -1 if the deletion failed.
+
+5. void printQueue(List*);
+
+This function receives a queue, and prints all the rectangle areas stored in the current queue.
+
+6. void freeQueue(List*);
+
+This function receives a queue, and frees all the allocated memories in the current queue.
+
+Grading Criteria:
+
+createQueue function: 5 points
+
+enQueue function: 5 points
+
+deQueue function: 5 points
+
+deQueueAll function: 5 points
+
+printQueue function: 5 points
+
+freeQueue function: 5 points
+
+Note:
+
+1. If your code does not compile with –Wall and –Werror, you will receive an 0 for this assignment.
+
+2. You will lose points if you don’t have sufficient comments.
